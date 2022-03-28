@@ -15,8 +15,8 @@ p = factor_n_list[0]
 q = factor_n_list[1]
 
 #find the totient, private exponent and decrypt the message
-phi = (p-1)*(q-1)
-d = int(gmpy2.invert(e, phi))
+totient = (p-1)*(q-1)
+d = int(gmpy2.invert(e, totient))
 m = pow(c, d, n)
 M = long_to_bytes(m)
 print(M)
