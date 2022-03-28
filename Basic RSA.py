@@ -3,8 +3,8 @@ import gmpy2
 from Crypto.Util.number import long_to_bytes
 
 #public key
-e = #public exponent (usually 65537)
 n = #modulus
+e = #public exponent (usually 65537)
 c = #ciphertext
 
 #use factordb to find p and q (will not work for huge n values)
