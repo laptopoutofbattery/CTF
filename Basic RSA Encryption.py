@@ -1,4 +1,3 @@
-from Crypto.Util.number import getPrime
 from Crypto.Util.number import bytes_to_long
 import gmpy2
 
