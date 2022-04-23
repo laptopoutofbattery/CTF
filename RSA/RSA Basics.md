@@ -18,7 +18,7 @@ Hence, an attack is usually required for decryption.
 2. Compute **d** using a function like `gmpy2.invert(e, phi)`
 3. Solve for plaintext by computing **ciphertext^d mod n**  
 
-[Basic Decryption Code](Basic%20RSA%20Encryption.py)
+[Basic Decryption Code](Basic%20RSA%20Decryption.py)
 
 Of course, factorising **n** is usually improbable, which is why RSA attacks are needed for specific situations.  
 The most basic attack would probably be the [cube root attack](https://crypto.stackexchange.com/questions/33561/cube-root-attack-rsa-with-low-exponent), an attack implemented when **p^e** is small.  
