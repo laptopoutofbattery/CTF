@@ -14,7 +14,7 @@ e = 65537 #any number from 1 to phi that is coprime to phi (usually 65537)
 d = int(gmpy2.invert(e, phi))
 
 #encrypt plaintext
-M = open("pt.txt", "rb").read() #plaintext message
+M = open("pt.txt", "rt").read() #plaintext message
 m = bytes_to_long(M)
 c = pow(m, e, n)
 print(c)
