@@ -9,7 +9,7 @@ Some basics on RSA encryption and decryption
 5. Determine **d** as the **modular multiplicative inverse** of **e** such that **e * d mod λ(n) = 1**
 6. Convert the message **M** into an integer **m** using a reversible protocol, then calculate **c** ciphertext through **m^e mod n**  
 
-[Basic Encryption Code](Basic%20RSA%20Encryption.py)
+[Basic Encryption Code](scripts/Basic_RSA_Encryption.py)
 
 ### Decryption
 RSA decryption involves **p, q and d**, all components that are kept secret in encryption.  
@@ -18,7 +18,7 @@ Hence, an attack is usually required for decryption.
 2. Compute **d** using a function like `gmpy2.invert(e, phi)`
 3. Solve for plaintext by computing **ciphertext^d mod n**  
 
-[Basic Decryption Code](Basic%20RSA%20Decryption.py)
+[Basic Decryption Code](scripts/Basic_RSA_Decryption.py)
 
 Of course, factorising **n** is usually improbable, which is why RSA attacks are needed for specific situations.  
 The most basic attack would probably be the [cube root attack](https://crypto.stackexchange.com/questions/33561/cube-root-attack-rsa-with-low-exponent), an attack implemented when **p^e** is small.  
