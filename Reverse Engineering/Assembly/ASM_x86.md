@@ -7,6 +7,7 @@ Assembly programs consist of an arrangement of instructions, which are executed 
 - Registers are internal memory storage locations included in the processor (places that the processor can store memory, kind of like variables in code)
 
 Some instructions: 
+
 | Instruction | What it does|
 |-------------|-------------|
 | nop         | does nothing|
