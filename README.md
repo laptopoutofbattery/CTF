@@ -1,3 +1,3 @@
 Some CTF stuff
 -
-mostly RSA and cryptography i guess
+mostly cryptography i guess
