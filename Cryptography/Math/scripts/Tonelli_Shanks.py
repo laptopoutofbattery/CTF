@@ -1,129 +1,46 @@
 # Algorithm to find square root of a number n modulo p
-# From https://www.geeksforgeeks.org/find-square-root-modulo-p-set-2-shanks-tonelli-algorithm/
+# From https://rosettacode.org/wiki/Tonelli-Shanks_algorithm#Python
 
-# utility function to find pow(base,
-# exponent) % modulus
-def pow1(base, exponent, modulus):
- 
-    result = 1;
-    base = base % modulus;
-    while (exponent > 0):
-        if (exponent % 2 == 1):
-            result = (result * base) % modulus;
-        exponent = int(exponent) >> 1;
-        base = (base * base) % modulus;
- 
-    return result;
- 
-# utility function to find gcd
-def gcd(a, b):
-    if (b == 0):
-        return a;
-    else:
-        return gcd(b, a % b);
- 
-# Returns k such that b^k = 1 (mod p)
-def order(p, b):
- 
-    if (gcd(p, b) != 1):
-        print("p and b are not co-prime.\n");
-        return -1;
- 
-    # Initializing k with first
-    # odd prime number
-    k = 3;
-    while (True):
-        if (pow1(b, k, p) == 1):
-            return k;
-        k += 1;
- 
-# function return p - 1 (= x argument) as
-# x * 2^e, where x will be odd sending e
-# as reference because updation is needed
-# in actual e
-def convertx2e(x):
-    z = 0;
-    while (x % 2 == 0):
-        x = x / 2;
-        z += 1;
-         
-    return [x, z];
- 
-# Main function for finding the
-# modular square root
-def STonelli(n, p):
- 
-    # a and p should be coprime for
-    # finding the modular square root
-    if (gcd(n, p) != 1):
-        print("a and p are not coprime\n");
-        return -1;
- 
-    # If below expression return (p - 1) then
-    # modular square root is not possible
-    if (pow1(n, (p - 1) / 2, p) == (p - 1)):
-        print("no sqrt possible\n");
-        return -1;
- 
-    # expressing p - 1, in terms of s * 2^e,
-    # where s is odd number
-    ar = convertx2e(p - 1);
-    s = ar[0];
-    e = ar[1];
- 
-    # finding smallest q such that
-    # q ^ ((p - 1) / 2) (mod p) = p - 1
-    q = 2;
-    while (True):
-         
-        # q - 1 is in place of (-1 % p)
-        if (pow1(q, (p - 1) / 2, p) == (p - 1)):
-            break;
-        q += 1;
- 
-    # Initializing variable x, b and g
-    x = pow1(n, (s + 1) / 2, p);
-    b = pow1(n, s, p);
-    g = pow1(q, s, p);
- 
-    r = e;
- 
-    # keep looping until b become
-    # 1 or m becomes 0
-    while (True):
-        m = 0;
-        while (m < r):
-            if (order(p, b) == -1):
-                return -1;
- 
-            # finding m such that b^ (2^m) = 1
-            if (order(p, b) == pow(2, m)):
-                break;
-            m += 1;
- 
-        if (m == 0):
-            return x;
- 
-        # updating value of x, g and b
-        # according to algorithm
-        x = (x * pow1(g, pow(2, r - m - 1), p)) % p;
-        g = pow1(g, pow(2, r - m), p);
-        b = (b * g) % p;
- 
-        if (b == 1):
-            return x;
-        r = m;
- 
-# Driver Code
-n = 2;
- 
-# p should be prime
-p = 113;
- 
-x = STonelli(n, p);
- 
-if (x == -1):
-    print("Modular square root is not exist\n");
-else:
-    print("Modular square root of", n,
-          "and", p, "is", x);
+# Legendre synbol returns 1 is a is qudaratic residue mod p, -1 if a is quadratic non-residue mod p, and 0 if a=0 mod p
+def legendre(a, p):
+    return pow(a, (p - 1) // 2, p)
+
+def tonelli(n, p):
+    assert legendre(n, p) == 1, "not a square (mod p)"
+    q = p - 1
+    s = 0
+    while q % 2 == 0:
+        q //= 2
+        s += 1
+    if s == 1:
+        return pow(n, (p + 1) // 4, p)
+    for z in range(2, p):
+        if p - 1 == legendre(z, p):
+            break
+    c = pow(z, q, p)
+    r = pow(n, (q + 1) // 2, p)
+    t = pow(n, q, p)
+    m = s
+    t2 = 0
+    while (t - 1) % p != 0:
+        t2 = (t * t) % p
+        for i in range(1, m):
+            if (t2 - 1) % p == 0:
+                break
+            t2 = (t2 * t2) % p
+        b = pow(c, 1 << (m - i - 1), p)
+        r = (r * b) % p
+        c = (b * b) % p
+        t = (t * c) % p
+        m = i
+    return r
+
+if __name__ == '__main__':
+    ttest = [(10, 13), (56, 101), (1030, 10009), (44402, 100049),
+	     (665820697, 1000000009), (881398088036, 1000000000039),
+             (41660815127637347468140745042827704103445750172002, 10**50 + 577)]
+    for n, p in ttest:
+        r = tonelli(n, p)
+        assert (r * r - n) % p == 0
+        print("n = %d p = %d" % (n, p))
+        print("\t  roots : %d %d" % (r, p - r))
