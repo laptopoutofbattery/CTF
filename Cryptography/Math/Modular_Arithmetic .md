@@ -25,10 +25,14 @@ Taken from https://brilliant.org/wiki/modular-arithmetic/
 **Multiplicative Inverse**
 - The modular multiplicative inverse of an integer $a$ is an integer $x$ with respect to a modulus $n$ such that $ax=1 \mod n$
 
+<br>
+
 ### Chinese Remainder Theorem
 States that if one knows the remainders of an integer when divided by many coprime moduli, one can find the remainder given when the integer is divided by the product of these moduli.  
 More information: https://en.wikipedia.org/wiki/Chinese_remainder_theorem and https://brilliant.org/wiki/chinese-remainder-theorem/  
 Script to solve the system of linear congruences: [Chinese_Remainder_Theorem.py](scripts/Chinese_Remainder_Theorem.py)  
+
+<br>
 
 ### Fermat's little theorem
 If $p$ is a prime numer, the for any integer $a$, $a^p = a \mod p$.  
