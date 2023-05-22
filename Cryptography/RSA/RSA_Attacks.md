@@ -6,9 +6,13 @@ Textbook attacks on RSA
 For smaller $n$ values, factorisation can be used to get $p$ and $q$, usually using http://factordb.com/.  
 [Script](scripts/Factor_n.py)
 
+<br>
+
 ### Cube Root Attack
 When $e$ and $m$ are small, we can bruteforce the modulo as $m^e = C + kn$ where $k$ is a constant. After which we just need to take the $e$th root to get $m$.  
 [Script](scripts/Cube_Root_Attack.py)
+
+<br>
 
 ### Common Modulus
 In the scenario where we have
