@@ -4,8 +4,8 @@ Different types of primes can be used to exploit oracles and custom encryption s
 
 ### AP Primes
 The [Green-Tao theorem](https://en.wikipedia.org/wiki/Green%E2%80%93Tao_theorem) states that the prime numbers contain arbitrary long arithmetic progressions.  
-A sequence of $k$ primes in arthimetic progression can be written as AP-$k$ and can be expressed as $an+b$ for $0 \le n \le k-1$.
-This site gives records of discovered AP-$k$ sequences: http://primerecords.dk/aprecords.htm  
+A sequence of $k$ primes in arthimetic progression can be written as AP- $k$ and can be expressed as $an+b$ for $0 \le n \le k-1$.
+This site gives records of discovered AP- $k$ sequences: http://primerecords.dk/aprecords.htm  
 
 <br>
 
