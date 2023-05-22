@@ -7,9 +7,13 @@ The [Green-Tao theorem](https://en.wikipedia.org/wiki/Green%E2%80%93Tao_theorem)
 A sequence of $k$ primes in arthimetic progression can be written as AP-$k$ and can be expressed as $an+b$ for $0 \le n \le k-1$.
 This site gives records of discovered AP-$k$ sequences: http://primerecords.dk/aprecords.htm  
 
+<br>
+
 ### Safe and Sophie Germain Primes
 A [Sophie Germain prime](https://en.wikipedia.org/wiki/Safe_and_Sophie_Germain_primes) is defined as a prime number $p$ where $2p+1$ is also prime. In this case $2p+1$ is referred to as a safe prime.  
 List of first few Sophie Germain primes: https://oeis.org/A005384  
+
+<br>
 
 ### Gaussian Primes
 Prime elements in the set of Gaussian integers $\mathbb Z[i]$. A Gaussian prime $z = a + bi$ satisfies one of the following properties:
