@@ -11,3 +11,5 @@ utility scripts amnd math concepts needed for cryptography
   - Formula for determining whether an integer is quadratic residue modulo a prime
 - [Tonelli Shanks](scripts/Tonelli_Shanks.py)
   - Solve for square root of an integer modulo a prime
+- [Pollard's rho](scripts/Pollard's_rho.py)
+  - Factorisation in $O(\sqrt n)$ time (for small prime factors)
