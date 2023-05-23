@@ -1,4 +1,3 @@
-from math import ceil, sqrt
 from gmpy2 import is_square, invert, isqrt
 from Crypto.Util.number import long_to_bytes
 
