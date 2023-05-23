@@ -7,7 +7,6 @@ Based on the representation of an odd integer as the difference of 2 squares
 n = a^2 - b^2
   = (a + b)(a - b)
 """
-
 def Factor(n):
     a = isqrt(n) # largest integer where a*a<=n
     if a * a == n:

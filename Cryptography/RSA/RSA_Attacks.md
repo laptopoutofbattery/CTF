@@ -4,7 +4,9 @@ Textbook attacks on RSA, most can be solved using [RsaCtfTool](https://github.co
 
 ### Factorisation
 For smaller $n$ values, factorisation can be used to get $p$ and $q$, usually using http://factordb.com/.  
-[Script](scripts/Factor_n.py)
+When small primes are used to generate $n$, [Pollard's rho algorithm](https://en.wikipedia.org/wiki/Pollard%27s_rho_algorithm) (O($\sqrt n$) time complexity) or [elliptic-curve factorisation (ecm)](https://en.wikipedia.org/wiki/Lenstra_elliptic-curve_factorization) can be used to factorise $n$.  
+Use `ecm.factor(n)` in [SageMath](https://doc.sagemath.org/html/en/reference/interfaces/sage/interfaces/ecm.html) for elliptic curve factorisation.  
+[Script (using Factordb)](scripts/Factor_n.py)
 
 <br>
 
@@ -24,3 +26,10 @@ After this, we can multiply them together, giving us
 $$C_1 * C_2 = m^{e_{1}*u + e_{2}*v} \text{ } (mod \text{ } n)$$
 Which is equal to $m^1$.  
 [Script](scripts/Common_Mod.py)
+
+<br>
+
+### Fermat's attack
+When $p$ and $q$ are close ($p-q<n^{\frac{1}{4}}$), [Fermat's factorization method](https://en.wikipedia.org/wiki/Fermat%27s_factorization_method) can be used to factorise $n$.  
+We do this by expressing $n$ as $(a-b)(a+b)$.  
+[Script](scripts/Fermat_Attack.py)
