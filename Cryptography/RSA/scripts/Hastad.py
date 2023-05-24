@@ -16,16 +16,6 @@ from gmpy2 import root
 
 EXPONENT = 3
 
-# filenames to read from
-CIPHERTEXT_1 = "ciphertext.1"
-CIPHERTEXT_2 = "ciphertext.2"
-CIPHERTEXT_3 = "ciphertext.3"
-
-MODULUS_1 = "modulus.1"
-MODULUS_2 = "modulus.2"
-MODULUS_3 = "modulus.3"
-
-
 def chinese_remainder_theorem(items):
     # Determine N, the product of all n_i
     N = 1
@@ -70,22 +60,17 @@ def mul_inv(a, b):
         x1 += b0
     return x1
 
-
-def get_value(filename):
-    with open(filename) as f:
-        value = f.readline()
-    return int(value, 16)
-
 if __name__ == '__main__':
 
-    C1 = get_value(CIPHERTEXT_1)
-    C2 = get_value(CIPHERTEXT_2)
-    C3 = get_value(CIPHERTEXT_3)
+    # Placeholder values
+    C1 = 0
+    C2 = 0
+    C3 = 0
     ciphertexts = [C1, C2, C3]
 
-    N1 = get_value(MODULUS_1)
-    N2 = get_value(MODULUS_2)
-    N3 = get_value(MODULUS_3)
+    N1 = 0
+    N2 = 0
+    N3 = 0
     modulus = [N1, N2, N3]
 
     C = chinese_remainder_theorem([(C1, N1), (C2, N2), (C3, N3)])
