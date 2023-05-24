@@ -21,7 +21,7 @@ In the scenario where we have
 
 <p align="center">
   <img src="../../assets/images/CommonMod.svg">
- </p>  
+</p>  
 
 We are able to solve for $n$ if $e_1$ and $e_2$ have a gcd of 1.
 All we need to do is calculate the bezout coefficients for $e_1$ and $e_2$ such that $e_{1}*u + e_{2}*v = 1$, then take each $C$ to the power of the respective coefficient.
@@ -40,3 +40,7 @@ We do this by expressing $n$ as $(a-b)(a+b)$.
 <br>
 
 ### Hastad's Broadcast Attack
+When we have
+<p align="center">
+  <img src="../../assets/images/Hastad.svg">
+</p>  
