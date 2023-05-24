@@ -10,7 +10,7 @@ Use `ecm.factor(n)` in [SageMath](https://doc.sagemath.org/html/en/reference/int
 
 <br>
 
-### Cube Root Attack
+### Cube Root attack
 When $e$ and $m$ are small, we can bruteforce the modulo as $m^e = C + kn$ where $k$ is a constant. After which we just need to take the $e$th root to get $m$.  
 [Script](scripts/Cube_Root_Attack.py)
 
@@ -39,8 +39,17 @@ We do this by expressing $n$ as $(a-b)(a+b)$.
 
 <br>
 
-### Hastad's Broadcast Attack
+### Hastad's Broadcast attack
 When we have
+
 <p align="center">
   <img src="../../assets/images/Hastad.svg">
 </p>  
+
+we can use the Chinese Remainder Theorem to construct a solution for $m^3$ and from there obtain $m$ through cube root.
+[Script](scripts/Hastad.py)
+
+<br>
+
+### Wiener's attack
+If $e$ is relatively big compared to $n$, then $d$ is probably small. In this case Wiener's attack can be used, specifically when $d < \frac{1}{3}n^{\frac{1}{4}}$
