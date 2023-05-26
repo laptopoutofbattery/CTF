@@ -52,4 +52,6 @@ we can use the Chinese Remainder Theorem to construct a solution for $m^3$ and f
 <br>
 
 ### Wiener's attack
-If $e$ is relatively big compared to $n$, then $d$ is probably small. In this case Wiener's attack can be used, specifically when $d < \frac{1}{3}n^{\frac{1}{4}}$
+If $e$ is relatively big compared to $n$, then $d$ is probably small. In this case Wiener's attack can be used, specifically when $d < \frac{1}{3}n^{\frac{1}{4}}$.  
+The math behind the theorem is too long to put here but this [post](https://bitsdeep.com/posts/attacking-rsa-for-fun-and-ctf-points-part-2/) covers it pretty well.  
+[Script using a module (note that RsaCtfTool should work as well)](scripts/Wiener.py)
