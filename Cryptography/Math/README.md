@@ -1,6 +1,7 @@
 ### Math
-utility scripts amnd math concepts needed for cryptography
+utility scripts and math concepts needed for cryptography
 
+Scripts:
 - [Chinese Remainder Theorem](scripts/Chinese_Remainder_Theorem.py)
   - Solve a system of modulo congruences
 - [Euclidean Algorithm](scripts/Euclid_Algo.py)
@@ -13,3 +14,8 @@ utility scripts amnd math concepts needed for cryptography
   - Solve for square root of an integer modulo a prime
 - [Pollard's rho](scripts/Pollard's_rho.py)
   - Factorisation in $O(\sqrt n)$ time (for small prime factors)
+
+Concepts:
+- [Modular Arithmetic](Modular_Arithmetic.md)
+- [Primes](Primes.md)
+- [Other concepts](Others.md)
