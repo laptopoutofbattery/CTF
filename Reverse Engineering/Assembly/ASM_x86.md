@@ -61,3 +61,4 @@ Some instructions:
 Some cool resources:  
 [omu training ASM (x86-64)](https://omu.rce.so/lessons/asm-x86-64/introduction)  
 [Nightmare](https://guyinatuxedo.github.io/01-intro_assembly/assembly/index.html)  
+[x86 Assembly Guide](https://www.cs.virginia.edu/~evans/cs216/guides/x86.html)  
