@@ -31,7 +31,7 @@ else:
 We first input a plaintext, which is encrypted using AES ECB, then encrypted again. We are given these two ciphertexts.  
 To get the flag, we have to input the correct ciphertext when our plaintext is encrypted thrice.  
 The first thing I noticed was that the key was not randomly generated, but is static. I tested this further in the challenge instance:  
-![Screenshot](../../assets/images/tfcctforacle.png)  
+![Screenshot](../assets/images/tfcctforacle.png)  
 The ciphertexts are the same when given the same input, which confirms this.  
 
 With that, all we need to do its encrypt the same message once, get the first ciphertext, and input this ciphertext again to be encrypted. After that, the second ciphertext will be our plaintext encrypted 3 times!  
