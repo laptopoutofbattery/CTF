@@ -15,7 +15,7 @@ Finite fields have the following properties (similar to groups):
 - Commutative: $a * b = b * a$, $a + b = b + a$
 
 ### Prime fields
-The integers modulo $p$ form a prime field $\mathbb{F}_{p}$ under mod-$p$ addition and multiplication.  
+The integers modulo $p$ form a prime field $\mathbb{F}_{p}$ under mod $p$ addition and multiplication.  
 All operations in prime fields are done modulo $p$.  
 
 ### Extension fields
