@@ -19,4 +19,4 @@ The integers modulo $p$ form a prime field $\mathbb{F}_{p}$ under mod-$p$ additi
 All operations in prime fields are done modulo $p$.  
 
 ### Extension fields
-Extension fields' ($\mathbb{F}_{p^m}$ where $m > 1$) elements are polynomials, taking the form of $a_{m-1}X^{m-1} + \text{...} + a_1X^1 + a_0$.
+Elements of extension fields ($\mathbb{F}_{p^m}$ where $m > 1$) are polynomials, taking the form of $a _{m-1}X^{m-1} + \text{...} + a_1X^1 + a_0$.
