@@ -19,3 +19,5 @@ Concepts:
 - [Modular Arithmetic](Modular_Arithmetic.md)
 - [Primes](Primes.md)
 - [Other concepts](Others.md)
+- [Finite Fields](Finite_Fields.md)
+- [Groups and Rings](Groups_Rings.md)

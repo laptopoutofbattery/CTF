@@ -10,7 +10,7 @@ When $m = 1$, we get a prime field. When $m > 1$, we get an extension field.
 Finite fields have the following properties (similar to groups):  
 - Closed: any operation performed with elements from the set returns an element contained in the original set
 - Associative: $(a * b) * c$ = $a * (b * c)$, $(a + b) + c$ = $a + (b + c)$
-- Identity: there exists a neitral element $b$ usually 1 such that $a * b = a$
+- Identity: there exists a neutral element $e$ usually 1 such that $a * e = a$
 - Inverse: within the set there's another element such that $a * a^{-1} = 1$
 - Commutative: $a * b = b * a$, $a + b = b + a$
 
