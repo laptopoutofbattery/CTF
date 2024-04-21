@@ -38,3 +38,12 @@ Script to solve the system of linear congruences: [Chinese_Remainder_Theorem.py]
 If $p$ is a prime numer, the for any integer $a$, $a^p = a \mod p$.  
 If $a$ is coprime to $p$ then $a^p-1 = 1 \mod p$.
 Extension of Euler's theorem which states $a^{\phi (n)} = 1 \mod n$ where $a$ is coprime to $n$.
+
+<br>
+
+### Useful identities
+For calculating inverses when value isn't comprime to modulus:
+https://flocto.github.io/writeups/2023/deadsecctf/lcg-writeup/#recovering-the-multiplier
+e.g. $a = b^{-1}c \mod p$
+let $g = gcd(b, c, p)$
+$a = \frac{b^{-1}}{g} \times \frac{c}{g} \mod \frac{m}{g}$

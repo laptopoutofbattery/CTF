@@ -5,3 +5,7 @@ High level languages such as C or Java are compiled into low level languages to 
 
 - [x86-64 Assembly Language](ASM_x86.md)
 - [WebAssembly](WASM.md)
+
+Useful links:
+- https://textbook.cs161.org/memory-safety/x86.html
+- https://godbolt.org/
