@@ -29,6 +29,11 @@ e = 65537
 c = pow(flag, e, N)
 print(N, e, c)
 ```
+```
+n = 172391551927761576067659307357620721422739678820495774305873584621252712399496576196263035396006999836369799931266873378023097609967946749267124740589901094349829053978388042817025552765214268699484300142561454883219890142913389461801693414623922253012031301348707811702687094437054617108593289186399175149061
+e = 65537
+c = 128185847052386409377183184214572579042527531775256727031562496105460578259228314918798269412725873626743107842431605023962700973103340370786679287012472752872015208333991822872782385473020628386447897357839507808287989016150724816091476582807745318701830009449343823207792128099226593723498556813015444306241
+```
 When I first looked at the encryption, fermat's attack came to mind since `nextPrime` is used to get `q`. However, a custom `nextPrime` function is used, and the difference between `p` and `q` is too large to factorise `n` using fermat's factorisation method.  
 
 Let's take a look at the `nextPrime` function:
@@ -52,11 +57,14 @@ We can walkthrough the steps of `nextPrime` to get a more useful equation for `q
 2. Then, `q = (k+1)(90!) + 1`
 3. Finally, `q = (k+1)(90!) + b(90!) + 1 = (k+b+1)(90!) + 1` where `b` is some constant
 
+#### The Attack
+
 Now, we can express `n` with these equations:
 `n = p*q = (k(90!) + a)*((k+b+1)(90!) + 1) = k(k+b+1)(90!)^2 + k(90!) + a(k+b+1)(90!) + a`
 Notice anything about this definition of `n`?  
 All of the terms are multiples of 90! except for `a`. Therefore, `n = a (mod 90!)`. This means we can calculate `a`.  
-We can continue expanding `n`:
+
+We can continue expanding `n`:  
 `n = k(k+b+1)(90!)^2 + k(90!) + a(k+b+1)(90!) + a = k^2(90!)^2 + k((b + 1)(90!)^2 + 90! + a(90!)) + a(b+1)(90!) + a`  
 Notice that we have made a quadratic equation in k:
 `k^2(90!)^2 + k((b + 1)(90!)^2 + 90! + a(90!)) + a(b+1)(90!) + a - n = 0`  
