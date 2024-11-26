@@ -71,7 +71,7 @@ Notice that we have made a quadratic equation in k:
 We already know `a` and `n`, so all we need is `b` and we can find the value of `k` through the qudratic formula.  
 
 The value of `b` is the number of times we add 90! to `q` such that it becomes a prime.  
-Remember how `p = 1 (mod 90!)`? This means that all the numbers from 2 to 90 won't be factors of `q`. That suggests that the value of `b` is small, as the factors of `q` must be large. We can confirm this by testing:
+Remember how `q = 1 (mod 90!)`? This means that all the numbers from 2 to 90 won't be factors of `q`. That suggests that the value of `b` is small, as the factors of `q` must be large. We can confirm this by testing:
 ```python
 from Crypto.Util.number import *
 
